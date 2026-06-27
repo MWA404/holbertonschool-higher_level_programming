@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module defines Shape abstract class and subclasses."""
+"""This module defines Shape, Circle, Rectangle and shape_info."""
 from abc import ABC, abstractmethod
 import math
 
@@ -23,7 +23,7 @@ class Circle(Shape):
 
     def __init__(self, radius):
         """Initialize a circle with a radius."""
-        self.radius = radius
+        self.radius = abs(radius)
 
     def area(self):
         """Return the area of the circle."""
@@ -52,6 +52,6 @@ class Rectangle(Shape):
 
 
 def shape_info(shape):
-    """Print the area and perimeter of any shape using duck typing."""
+    """Print the area and perimeter of any shape."""
     print("Area: {}".format(shape.area()))
     print("Perimeter: {}".format(shape.perimeter()))
