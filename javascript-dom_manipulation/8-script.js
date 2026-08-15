@@ -1,4 +1,4 @@
-function displayHello() {
+function displayHello () {
   fetch('https://hellosalut.stefanbohacek.com/?lang=fr')
     .then(function (response) {
       return response.json();
